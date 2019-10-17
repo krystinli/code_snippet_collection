@@ -1,2 +1,2 @@
-# pandas
-practise analysis on random sample data
+# pandas_code_snippet 
+
