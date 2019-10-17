@@ -1,2 +1,2 @@
 # pandas
-pandas manipulation practise 
+practise analysis on random sample data
