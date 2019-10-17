@@ -8,13 +8,13 @@ import os
 cwd = os.get_cwd()
 cwd # check current dir 
 
-pd.read_csv('filename.csv')
-pd.read_csv('folder/filename.csv', header=None, names= ['col1_nm','col2_nm',...])
+pd.read_csv('filename.csv', sep=',')
+pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col2_nm',...])
 
 # counting
-df.col_nm.count() # count(*)
-df.col_nm.nunique() # count(distinct col_nm)
-
+df.col_nm.count() # select count(*)
+df.col_nm.nunique() # select count(distinct col_nm)
+df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from df where country = 'CA'
 
 
 ```
