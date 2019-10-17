@@ -21,8 +21,13 @@ df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from 
 
 # group by 
 
-
-# left join 
+# left join
+pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
+pd_merge = pd.merge(df_mem, df_act, how='left', on='memberID') # df_mem left join df_act on memberID
 
 # union 
+
+# sort
+
+# drived col 
 ```
