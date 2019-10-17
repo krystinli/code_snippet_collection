@@ -15,10 +15,14 @@ pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col
 df.col_nm.count() # select count(*)
 df.col_nm.nunique() # select count(distinct col_nm)
 
-
 # where stmt 
 df_ca = df[df['county'=='CA']] # select * from df where country = 'CA'
 df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from df where country = 'CA'
 
+# group by 
 
+
+# left join 
+
+# union 
 ```
