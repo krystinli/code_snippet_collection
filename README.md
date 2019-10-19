@@ -1,4 +1,6 @@
 # pandas_code_snippet 
+- [ ] complete full analysis in dataset1
+- [ ] create new dataset2 + add more complex questions
 
 ```python
 import pandas as pd
@@ -20,6 +22,7 @@ df_ca = df[df['county'=='CA']] # select * from df where country = 'CA'
 df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from df where country = 'CA'
 
 # group by 
+df.groupby(['colname']).count()
 
 # left join
 pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
@@ -29,5 +32,5 @@ pd_merge = pd.merge(df_mem, df_act, how='left', on=['memberID']) # df_mem left j
 
 # sort
 
-# drived col 
+# new col 
 ```
