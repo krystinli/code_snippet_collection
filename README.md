@@ -29,8 +29,12 @@ df.groupby(['colname']).count()
 # left join
 pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
 pd_merge = pd.merge(df_mem, df_act, how='left', on=['memberID']) # df_mem left join df_act on memberID
+appending_merge = pd.merge(df1, df2, right_index=True, left_index=True)
 
 # union 
+df = df.append(df2, ignore_index=True) -- df cannot be empty [] to start with 
+df = pd.concat(df2)
+df = [df1, df2] 
 
 # sort
 
