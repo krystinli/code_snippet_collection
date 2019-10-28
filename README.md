@@ -39,4 +39,5 @@ df = [df1, df2]
 # sort
 
 # new col 
+df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
 ```
