@@ -1,4 +1,6 @@
 # pandas_code_snippet 
+- [ ] more complex joining, pd.merge vs. pd.concat vs. append
+- [ [ btw pd df and list 
 
 ### 01_reading file
 ```python
