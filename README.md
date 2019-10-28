@@ -1,7 +1,6 @@
 # pandas_code_snippet 
-- [ ] complete full analysis in dataset1
-- [ ] create new dataset2 + add more complex questions
 
+### 01_reading file
 ```python
 import pandas as pd
 import os
@@ -12,7 +11,10 @@ cwd # check current dir
 
 pd.read_csv('filename.csv', sep=',')
 pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col2_nm',...])
+```
 
+### 02_sql_operations
+```python
 # counting
 df.col_nm.count() # select count(*)
 df.col_nm.nunique() # select count(distinct col_nm)
