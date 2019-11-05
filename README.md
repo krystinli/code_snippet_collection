@@ -1,6 +1,4 @@
 # pandas_code_snippet 
-- [ ] more complex joining, pd.merge vs. pd.concat vs. append
-- [ ] btw pd df and list 
 
 ### 01_reading file
 ```python
@@ -27,11 +25,12 @@ df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from 
 
 # group by 
 df.groupby(['colname']).count()
+df.groupby(['colname']).nunique() # group by + count distinct 
 
 # left join
 pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
 pd_merge = pd.merge(df_mem, df_act, how='left', on=['memberID']) # df_mem left join df_act on memberID
-appending_merge = pd.merge(df1, df2, right_index=True, left_index=True)
+appending_merge = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
 
 # union 
 df = df.append(df2, ignore_index=True) -- df cannot be empty [] to start with 
@@ -39,7 +38,12 @@ df = pd.concat(df2)
 df = [df1, df2] 
 
 # sort
+df['rank'] = some_col.rank(ascending=False) # adding rank col to the df 
+df.sort_values('rank', ascending=True).head(10) # order by rank limit 10 
 
 # new col 
 df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
+
+# convert pd series into data frame
+new_df = some_col.to_frame()
 ```
