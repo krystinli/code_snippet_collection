@@ -11,6 +11,10 @@ cwd # check current dir
 
 pd.read_csv('filename.csv', sep=',')
 pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col2_nm',...])
+
+# files to_csv
+df_output = pd.DataFrame(lst_output, columns=["col1","col2","col3"])
+df_output.to_csv('filename.csv', sep=',')
 ```
 
 ### 02_sql_operations
