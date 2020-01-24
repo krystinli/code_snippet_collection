@@ -1,4 +1,4 @@
-# pandas_code_snippet 
+# pandas
 
 ### 01_reading file
 ```python
