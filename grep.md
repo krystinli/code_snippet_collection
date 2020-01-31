@@ -1,7 +1,7 @@
 ### global regular expression print
 
 find
-- `grep 'str_name' *` - find a str in files
+- `grep 'str_name' * > grep_output.txt` - find a str in files
  - + `-r` for recursive => `grep -r 'str_name' *`
  - + `-l` for filename => `grep -l 'str_name' *`
  - + `-i` for case insensitive => `grep -i 'str_name' *`
