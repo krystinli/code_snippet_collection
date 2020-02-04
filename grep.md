@@ -10,3 +10,4 @@ replace
 - `grep -r 'str_name' * | xargs -0 sed -i '' 's/str_name/str_name_new/g'` - find and replace MacOS
  
 ### Escaping
+- `grep '\[*\]' file` - find any [...] 
