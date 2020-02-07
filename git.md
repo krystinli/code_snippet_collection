@@ -15,6 +15,7 @@ can't find remote branch?
   - `git rm filename`
   - `git commit -m "remove file"`
 
-### Clean
+### Cleanning 
 - print list of untracked files `git clean -n`
 - delete these untracked files `git clean -f`
+
