@@ -19,3 +19,8 @@ can't find remote branch?
 - print list of untracked files `git clean -n`
 - delete these untracked files `git clean -f`
 
+### Stashing
+- `git stash` temporarily save current uncommit work so that I can checkout a diff branch
+- `git stash list` see all the previous stash work
+- `git stash pop stash@{0}` go back to one of the previous temporary saved version 
+
