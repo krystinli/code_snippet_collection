@@ -51,7 +51,7 @@ import os
 cwd = os.get_cwd()
 cwd # check current dir 
 
-pd.read_csv('filename.csv', sep=',')
+pd.read_csv('filename.csv', sep=',').drop(['unnamed 0'], axis=1) # remove index
 pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col2_nm',...])
 
 # files to_csv
