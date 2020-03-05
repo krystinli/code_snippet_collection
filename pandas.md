@@ -47,6 +47,10 @@ df2 = df1[['col_1', 'col4', 'col5']]
 import pandas as pd
 import os
 
+# avoid saving or getting index_col
+pd.read_csv("file0.csv", index_col=0)
+data.to_csv("file1.csv", index=False)
+
 # file handling
 cwd = os.get_cwd()
 cwd # check current dir 
