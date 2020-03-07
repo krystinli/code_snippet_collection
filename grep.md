@@ -1,4 +1,13 @@
 ### Global_Regular_Expression_Print
+- `grep xxx filename` finding xxx in file
+- `grep -w xxx filename` finding xxx in file and restrict to xxx only
+- `grep -n xxx filename` finding xxx in file with line number
+- `grep -v xxx filename` inverse finding ... return everything that doesn't match 
+- `grep -i xxx filename` finding xxx in file with inverse output
+- `man grep` prints mannual of grep function and `q` to quit mannual mode
+- `grep -E '^.o' haiku.txt` irregular expr
+- `find . -type d` in the current dir `.`, find things that're dir `-type d`
+- `find . -type f` in the current dir `.`, find things that're files `-type f`
 
 find
 - `grep 'str_name' * > grep_output.txt` - find a str in files
