@@ -27,6 +27,7 @@ df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
 ```python
 # left join
 new_df = pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
+new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') # join with different col_name
 new_df_append = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
 
 # union 
