@@ -62,3 +62,9 @@ pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col
 df_output = pd.DataFrame(lst_output, columns=["col1","col2","col3"])
 df_output.to_csv('filename.csv', sep=',')
 ```
+
+### Condition
+```python
+df.isnull # IS NULL in sql
+df.notnull # IS NOT NULL
+```
