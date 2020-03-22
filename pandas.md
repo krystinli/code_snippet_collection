@@ -9,6 +9,9 @@ df["col_name"] = df["col_name"].str.upper()
 # null condition
 df.isnull # IS NULL in sql
 df.notnull # IS NOT NULL
+
+# if condition
+df.loc[df['column name'] condition, 'new column name'] = 'value if condition is met'
 ```
 
 ### SQL
