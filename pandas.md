@@ -2,6 +2,9 @@
 
 ### General
 ```python
+# JP notebook viewing option
+pandas.set_option('display.max_rows', 10)
+
 # case
 df["col_name"] = df["col_name"].str.lower()
 df["col_name"] = df["col_name"].str.upper()
