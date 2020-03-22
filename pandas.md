@@ -63,8 +63,13 @@ df_output = pd.DataFrame(lst_output, columns=["col1","col2","col3"])
 df_output.to_csv('filename.csv', sep=',')
 ```
 
-### Condition
+### Basics
 ```python
+# case
+df["col_name"] = df["col_name"].str.lower()
+df["col_name"] = df["col_name"].str.upper()
+
+# null condition
 df.isnull # IS NULL in sql
 df.notnull # IS NOT NULL
 ```
