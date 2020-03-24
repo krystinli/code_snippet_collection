@@ -22,6 +22,7 @@ df.loc[df['column name'] condition, 'new column name'] = 'value if condition is 
 # counting
 df.col_nm.count() # select count(*)
 df.col_nm.nunique() # select count(distinct col_nm)
+df.drop_duplicates() # drop dup rows
 
 # sorting
 df['rank'] = some_col.rank(ascending=False) # adding rank col to the df 
