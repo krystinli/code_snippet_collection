@@ -15,6 +15,9 @@ df.notnull # IS NOT NULL
 
 # if condition
 df.loc[df['column name'] condition, 'new column name'] = 'value if condition is met'
+
+# drop columns
+df.drop(['B', 'C'], axis=1)
 ```
 
 ### SQL
