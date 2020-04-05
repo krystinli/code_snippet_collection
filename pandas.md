@@ -28,9 +28,9 @@ df.col_nm.nunique() # select count(distinct col_nm)
 df.drop_duplicates() # drop dup rows
 
 # sorting
+df.sort_values(by=['some_col'], ascending=False, inplace=True) # order by desc
 df['rank'] = some_col.rank(ascending=False) # adding rank col to the df 
 df.sort_values('rank', ascending=True).head(10) # order by rank limit 10 
-df.sort_values('rank', ascending=True).tail(10)
 
 # where stmt 
 df[df['county'=='CA']] # select * from df where country = 'CA'
