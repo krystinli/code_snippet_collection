@@ -22,6 +22,9 @@ df.loc[df['column name'] condition, 'new column name'] = 'value if condition is 
 
 # drop columns
 df.drop(['B', 'C'], axis=1)
+
+# extract a single value from panda series row
+df[df[col]==A][col2].tolist()[0]
 ```
 
 ### SQL
