@@ -5,6 +5,10 @@
 # JP notebook viewing option
 pandas.set_option('display.max_rows', 10)
 
+# turn list of list into df, useful when looping over the same process and computer different metrics 
+data.append([item1, item2, item3)]
+new_df = pd.DataFrame(data, columns = ['colname1','colname2','colname3'])
+
 # case
 df["col_name"] = df["col_name"].str.lower()
 df["col_name"] = df["col_name"].str.upper()
