@@ -24,3 +24,6 @@ can't find remote branch?
 - `git stash list` see all the previous stash work
 - `git stash pop stash@{0}` go back to one of the previous temporary saved version 
 
+### User
+- `git config --global user.email "krystinkrystin@hotmail.com"`
+- `git config --global user.name krystinli`
