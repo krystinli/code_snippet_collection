@@ -8,6 +8,9 @@ can't find remote branch?
 - `git branch -r` return all remote branches
 - `git fetch` if still can't see, fetch everything from remote
 
+migrate to a new org
+- `git remote set-url origin new_url` to point to new url
+
 ### Delete
 - delete remote branch: `git push origin --delete old_branch`
 - delete local branch: `git branch -D old_branch`
