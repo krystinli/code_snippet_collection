@@ -17,6 +17,9 @@ df["col_name"] = df["col_name"].str.upper()
 df.isnull # IS NULL in sql
 df.notnull # IS NOT NULL
 
+# replace str with something else 
+df.replace({None:np.nan}, inplace=True)
+
 # if condition
 df.loc[df['column name'] condition, 'new column name'] = 'value if condition is met'
 
