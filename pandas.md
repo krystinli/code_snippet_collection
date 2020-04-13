@@ -2,8 +2,9 @@
 
 ### General
 ```python
-# JP notebook viewing option
-pandas.set_option('display.max_rows', 10)
+# notebook viewing option
+pd.set_option('display.max_columns', 10)
+pd.set_option('display.max_rows', 10)
 
 # turn list of list into df, useful when looping over the same process and computer different metrics 
 data.append([item1, item2, item3)]
