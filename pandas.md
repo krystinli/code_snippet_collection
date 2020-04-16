@@ -18,6 +18,9 @@ df["col_name"] = df["col_name"].str.upper()
 df.isnull # IS NULL in sql
 df.notnull # IS NOT NULL
 
+# na condition
+pd.isna(..)
+
 # replace str with something else 
 df.replace({None:np.nan}, inplace=True)
 
