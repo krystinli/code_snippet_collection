@@ -17,9 +17,11 @@ df["col_name"] = df["col_name"].str.upper()
 # null condition
 df.isnull # IS NULL in sql
 df.notnull # IS NOT NULL
-
-# na condition
 pd.isna(..)
+
+# count NaN
+df[col].isnull().sum() # count num of NaNs in a columns
+df.isnull().sum().sum() # count num of NaNs in the entire df
 
 # replace str with something else 
 df.replace({None:np.nan}, inplace=True)
