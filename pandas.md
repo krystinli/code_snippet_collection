@@ -22,7 +22,8 @@ df.notnull # IS NOT NULL
 df.replace({None:np.nan}, inplace=True)
 
 # if condition
-df.loc[df['column name'] condition, 'new column name'] = 'value if condition is met'
+df.loc[df['column name'] condition1, 'new column name'] = 'value1 if condition1 is met'
+df.loc[df['column name'] condition2, 'new column name'] = 'value2 if condition2 is met'
 
 # drop columns
 df.drop(['B', 'C'], axis=1)
