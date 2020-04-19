@@ -72,9 +72,8 @@ new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1'
 new_df_append = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
 
 # union 
-df = df.append(df2, ignore_index=True) # df cannot be empty [] to start with 
-df = pd.concat(df2)
-df = [df1, df2] 
+union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
+union_df = pd.concat([df1, df2], ignore_index=True)
 
 # convert pd series into data frame
 new_df = some_col.to_frame()
