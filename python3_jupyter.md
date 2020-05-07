@@ -1,4 +1,6 @@
-## code_snippet
+## general_snippet
+
+data loading
 ```python
 
 # runtime measure
@@ -15,4 +17,22 @@ data = pd.concat(chunk_list)
 
 # data loading with dask 
 data = dask.dataframe.read_csv("test_data.csv").compute()
+```
+
+random 
+```
+import random
+random.randrange(1,10)
+```
+
+## string
+```
+.strip() # remove whitespace
+.lower()
+.replace(old,new)
+
+#  splits the string into substrings if it finds instances of the separator
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+
 ```
