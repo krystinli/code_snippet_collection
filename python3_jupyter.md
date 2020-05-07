@@ -20,13 +20,13 @@ data = dask.dataframe.read_csv("test_data.csv").compute()
 ```
 
 random 
-```
+```python
 import random
 random.randrange(1,10)
 ```
 
 ## string
-```
+```python
 .strip() # remove whitespace
 .lower()
 .replace(old,new)
