@@ -21,6 +21,7 @@ migrate to a new org
 - `git remote set-url origin new_url` to point to new url
 
 ### Cleanning 
+- `git reset` un-add all files beore commit
 - print list of untracked files `git clean -n`
 - delete these untracked files `git clean -f`
 
