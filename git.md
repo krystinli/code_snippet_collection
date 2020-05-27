@@ -1,8 +1,10 @@
 ### Cleanning 
 - `git reset filename` un-add beore commit
 - `git checkout filename` undo all changes before adding
+- `git reset --hard` undo all local changes and revert to recent commit state
 - print list of untracked files `git clean -n`
 - delete these untracked files `git clean -f`
+
 
 ### Delete
 - delete remote branch: `git push origin --delete old_branch`
