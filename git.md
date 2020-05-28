@@ -32,6 +32,8 @@ migrate to a new org
 - `git stash` temporarily save current uncommit work so that I can checkout a diff branch
 - `git stash list` see all the previous stash work
 - `git stash pop stash@{0}` go back to one of the previous temporary saved version 
+- `git stash drop <stash_id>` delete a particular stash
+- `git stash clear` delete all stash
 
 ### User
 - `git config --global user.email "krystinkrystin@hotmail.com"`
