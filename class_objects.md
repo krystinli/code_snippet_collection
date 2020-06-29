@@ -25,4 +25,16 @@ p1 = Person("John", 36)
 
 print(p1.name) # "John"
 print(p1.age) # 36
+
+# General form 
+class ABC:
+   def __init__(self,input1,input2...)
+      self.input1=input1
+      self.input2=input2
+   
+   def method1(self):
+      ...
+   
+   def method2(self):
+      ...
 ```
