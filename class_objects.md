@@ -40,3 +40,19 @@ class ABC:
    def method2(self):
       ...
 ```
+
+The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class. For example, 
+```python
+class Person:
+   def __init__(self, firstname, lastname, age)
+      self.firstname = firstname
+      self.lastname = lastname
+      self.age = age
+   
+   def greetings(self):
+      print("Hello!" + self.firstname)
+
+# call the class
+p1 = Person("Butter","Fly",2)
+p1.greetings()
+```
