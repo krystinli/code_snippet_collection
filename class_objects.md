@@ -1,6 +1,6 @@
 ## Python Class and Objects
 Python is an object oriented programming language. Almost everything in Python is an object with its properties and methods. A Class is like an object constructor, or a "blueprint" for creating objects.
-- [01_Creation]()
+- [01_Creation](https://github.com/krystinli/code_snippet_collection/blob/master/class_objects.md#01_creation)
 - [02__init__()]()
 - [03_solve]()
 
