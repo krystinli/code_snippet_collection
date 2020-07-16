@@ -19,7 +19,7 @@ print(p1.x) # 5
 ```
 
 ### 02__init__()
-All classes have a built-in function called __init__() and is always executed when the class is being initiated. Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
+All classes have a built-in function called `__init__()` and is always executed when the class is being initiated. Use the `__init__()` function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 ```python
 class Person:
   def __init__(self, name, age):
@@ -32,21 +32,7 @@ print(p1.name) # "John"
 print(p1.age) # 36
 ```
 
-General form 
-```python
-class ABC:
-   def __init__(self,input1,input2...)
-      self.input1=input1
-      self.input2=input2
-   
-   def method1(self):
-      ...
-   
-   def method2(self):
-      ...
-```
-
-The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class. For example, 
+The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.
 ```python
 class Person:
    def __init__(self, firstname, lastname, age)
@@ -55,11 +41,10 @@ class Person:
       self.age = age
    
    def greetings(self):
-      print("Hello!" + self.firstname)
+      print("Hello!" + self.firstname + self.lastname)
 
-# call the class
-p1 = Person("Butter","Fly",2)
-p1.greetings()
+p1 = Person("Butter", "Fly", 2)
+p1.greetings() # "Hello!ButterFly!"
 ```
 
 ### 03_solve
