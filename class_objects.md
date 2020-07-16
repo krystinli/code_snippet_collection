@@ -56,3 +56,6 @@ class Person:
 p1 = Person("Butter","Fly",2)
 p1.greetings()
 ```
+
+### 03_solve
+- [find-the-torsional-angle](https://www.hackerrank.com/challenges/class-2-find-the-torsional-angle/problem)
