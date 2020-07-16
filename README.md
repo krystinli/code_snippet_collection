@@ -1,5 +1,5 @@
 ## TOC
-- [[class_objects]](https://github.com/krystinli/code_snippet_collection/blob/master/class_objects.md)
+- [ ] [[class_objects]](https://github.com/krystinli/code_snippet_collection/blob/master/class_objects.md)
 
 ### Things to Play Around
 - [ ] [[leetcode]](https://leetcode.com/)
