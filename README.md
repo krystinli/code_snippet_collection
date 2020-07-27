@@ -1,4 +1,6 @@
 ### Topics
+- [x] [01_magic_function](https://github.com/krystinli/code_snippet_collection/blob/master/magic_function.ipynb)
+- [x] [02_class_obj](https://github.com/krystinli/code_snippet_collection/blob/master/class_obj.ipynb)
 
 ### Problem_Sets
 - [ ] [[leetcode]](https://leetcode.com/)
