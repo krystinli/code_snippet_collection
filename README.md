@@ -1,7 +1,4 @@
-## TOC
-- [ ] [[class_objects]](https://github.com/krystinli/code_snippet_collection/blob/master/class_objects.md)
-
-### Things to Play Around
+### Problem_Sets
 - [ ] [[leetcode]](https://leetcode.com/)
 - [ ] [[medium]](https://medium.com/)
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
@@ -11,9 +8,3 @@
 - [ ] [[w3school]](https://www.w3schools.com/python/python_classes.asp)
 
 ### Topics
-- [x] building packages/tools
-- [x] analytics
-- [x] visualization
-- [x] modelling
-- [x] statistics
-- [x] experimentation 
