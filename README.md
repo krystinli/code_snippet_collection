@@ -9,5 +9,5 @@
 - [ ] [[Python_Notes]](https://github.com/krystinli/Learnings/blob/master/01_Python.md)
 - [ ] [[w3school]](https://www.w3schools.com/python/python_classes.asp)
 - [ ] [[leetcode]](https://leetcode.com/)
-  - [ ] [smallest-subtree-with-all-the-deepest-nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
+  - [ ] smallest-subtree-with-all-the-deepest-nodes [problem](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
