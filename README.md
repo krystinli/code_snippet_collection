@@ -1,6 +1,8 @@
 ### Topics
 - [x] [01_magic_function](https://github.com/krystinli/code_snippet_collection/blob/master/magic_function.ipynb) - `%timeit` `%matplotlib`
 - [x] [02_class_obj](https://github.com/krystinli/code_snippet_collection/blob/master/class_obj.ipynb) - define a class object 
+- [x] [03_binding](https://github.com/krystinli/code_snippet_collection/blob/master/binding.ipynb) - attributes and methods
+- [ ] [04_comparing_types]()
 
 ### Problem_Sets
 - [ ] [[medium]](https://medium.com/)
