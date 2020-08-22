@@ -1,13 +1,10 @@
 ### Topics
-- [x] [01_binding](https://github.com/krystinli/code_snippet_collection/blob/master/binding.ipynb) - attributes and methods
-- [x] [02_class_obj](https://github.com/krystinli/code_snippet_collection/blob/master/class_obj.ipynb) - define a class object 
-- [ ] [04_comparing_types]()
-- [x] [01_magic_function](https://github.com/krystinli/code_snippet_collection/blob/master/magic_function.ipynb) - `%timeit` `%matplotlib`
+- [x] [Python_Functions](https://github.com/krystinli/code_snippet_collection/tree/master/Python_Functions) - python code snippets
+- [x] [_]() 
 
 contribute
 - `git config --global user.email "krystinkrystin@hotmail.com"`
 - `git config --global user.name krystinli`
-
 
 ### Problem_Sets
 - [ ] [[medium]](https://medium.com/)
