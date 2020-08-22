@@ -33,7 +33,3 @@ migrate to a new org
 - `git stash pop stash@{0}` go back to one of the previous temporary saved version 
 - `git stash drop <stash_id>` delete a particular stash
 - `git stash clear` delete all stash
-
-### User
-- `git config --global user.email "krystinkrystin@hotmail.com"`
-- `git config --global user.name krystinli`
