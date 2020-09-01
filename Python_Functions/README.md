@@ -5,4 +5,6 @@
 - [x] [[03_ndarray]](https://github.com/krystinli/code_snippet_collection/blob/master/Python_Functions/03_ndarray.ipynb) numpy
 - [x] [[04_Function]](https://github.com/krystinli/code_snippet_collection/blob/master/Python_Functions/04_Function.ipynb)
 - [x] [leetcode](https://leetcode.com/problemset/all/)
+  - [100_leetcode_easy]()
+  - [101_leetcode_medium]()
   
