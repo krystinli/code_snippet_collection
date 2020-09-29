@@ -1,43 +1,52 @@
 # pandas
 
-### General
+### File_Transfer
 ```python
-# notebook viewing option
-pd.set_option('display.max_columns', 10)
-pd.set_option('display.max_rows', 10)
+# avoid saving or getting index_col
+pd.read_csv("filename.csv", index_col=0)
+data.to_csv("filename.csv", index=False)
 
-# turn list of list into df, useful when looping over the same process and computer different metrics 
-data.append([item1, item2, item3)]
+# remove index
+pd.read_csv("filename.csv", sep=",").drop(["unnamed 0"], axis=1) 
+pd.read_csv("folder/filename.csv", sep="|" , header=None, names= ["col1_nm","col2_nm",...]) # assign new col names 
+```
+
+### Value_Setting
+```python
 new_df = pd.DataFrame(data, columns = ['colname1','colname2','colname3'])
 
 # case
 df["col_name"] = df["col_name"].str.lower()
 df["col_name"] = df["col_name"].str.upper()
 
-# null condition
-df.isnull # IS NULL in sql
-df.notnull # IS NOT NULL
-pd.isna(..)
-
-# count NaN
-df[col].isnull().sum() # count num of NaNs in a columns
-df.isnull().sum().sum() # count num of NaNs in the entire df
-
-# replace str with something else 
-df.replace({None:np.nan}, inplace=True)
-
 # if condition
-df.loc[df['column name'] condition1, 'new column name'] = 'value1 if condition1 is met'
-df.loc[df['column name'] condition2, 'new column name'] = 'value2 if condition2 is met'
-
-# drop columns
-df.drop(['B', 'C'], axis=1)
+df.loc[df["Column1"]=xxx, "Column2"] = "New value for Column2"
 
 # extract a single value from panda series row
 df[df[col]==A][col2].tolist()[0]
 
+# drop columns
+df.drop(["Column1"], axis=1)
+
 # reset_index
 df.reset_index(drop=True)
+```
+
+### NaN/NULL
+```python
+# count NaN
+df[col].isnull().sum() # count num of NaNs in a columns
+df.isnull().sum().sum() # count num of NaNs in the entire df
+
+# replace str None with NaN
+df.replace({None:np.nan}, inplace=True)
+```
+
+### Jupyter_Notebooks
+```python
+# notebook viewing option
+pd.set_option('display.max_columns', 10)
+pd.set_option('display.max_rows', 10)
 ```
 
 ### SQL
@@ -80,25 +89,4 @@ new_df = some_col.to_frame()
 
 # creating a new df with a subset of columns
 df2 = df1[['col_1', 'col4', 'col5']]
-```
-
-### File_Transfer
-```python
-import pandas as pd
-import os
-
-# avoid saving or getting index_col
-pd.read_csv("file0.csv", index_col=0)
-data.to_csv("file1.csv", index=False)
-
-# file handling
-cwd = os.get_cwd()
-cwd # check current dir 
-
-pd.read_csv('filename.csv', sep=',').drop(['unnamed 0'], axis=1) # remove index
-pd.read_csv('folder/filename.csv', sep='|' , header=None, names= ['col1_nm','col2_nm',...])
-
-# files to_csv
-df_output = pd.DataFrame(lst_output, columns=["col1","col2","col3"])
-df_output.to_csv('filename.csv', sep=',')
 ```
