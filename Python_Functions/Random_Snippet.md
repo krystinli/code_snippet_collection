@@ -1,6 +1,8 @@
-## general_snippet
+# TOC
+- Data_Load
+- String_Attributes
 
-### Data_Load
+## Data_Load
 With Dask vs. Pandas chunksize option
 ```python
 
@@ -28,7 +30,7 @@ import random
 random.randrange(1,10)
 ```
 
-## string
+## String_Attributes
 ```python
 .strip() # remove whitespace
 .lower()
