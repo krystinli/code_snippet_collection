@@ -1,16 +1,30 @@
 # TOC
 - Data_Load
+- time.time()
 - String_Attributes
+
+
+## time.time()
+runtime measure
+```python
+# 1) time.time()
+import time
+start_time = time.time()
+...
+print("This process takes %s seconds" %(time.time()-start_time))
+
+# 2) %timeit magic function
+import numpy as np
+
+a = np.random.randn(100,100)
+%timeit np.dot(a, a)
+> 35.6 µs ± 256 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+```
 
 ## Data_Load
 With Dask vs. Pandas chunksize option
 ```python
-
-# runtime measure
-import time
-start_time = time.time()
-
-# data loading with pandas 
+# 1) data loading with pandas 
 df_chunk = pd.read_csv("test_data.csv", chunksize=100000) 
 
 chunk_list = []  
@@ -18,10 +32,8 @@ for chunk in df_chunk:
     chunk_list.append(chunk)
 data = pd.concat(chunk_list)
 
-# data loading with dask 
+# 2) data loading with dask 
 data = dask.dataframe.read_csv("test_data.csv").compute()
-
-print("This process takes %s seconds" %(time.time()-start_time))
 ```
 
 random 
