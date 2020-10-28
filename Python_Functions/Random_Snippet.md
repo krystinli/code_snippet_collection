@@ -1,6 +1,8 @@
 # TOC
 - Data_Load
 - String_Attributes
+- Random_Number
+- matplotlib
 - time.time()
 
 
@@ -38,6 +40,15 @@ a.split(",") # returns ['Hello', ' World!']
 ```python
 import random
 random.randrange(1,10)
+```
+<br />
+
+## matplotlib
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+
+plt.plot(np.random.randn(50).cumsum())
 ```
 <br />
 
