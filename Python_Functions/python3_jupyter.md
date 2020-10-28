@@ -1,11 +1,12 @@
 ## general_snippet
 
-data loading
+### Data_Load
+With Dask vs. Pandas chunksize option
 ```python
 
 # runtime measure
 import time
-time.time()
+start_time = time.time()
 
 # data loading with pandas 
 df_chunk = pd.read_csv("test_data.csv", chunksize=100000) 
@@ -17,6 +18,8 @@ data = pd.concat(chunk_list)
 
 # data loading with dask 
 data = dask.dataframe.read_csv("test_data.csv").compute()
+
+print("This process takes %s seconds" %(time.time()-start_time))
 ```
 
 random 
