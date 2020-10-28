@@ -1,26 +1,10 @@
 # TOC
 - Data_Load
-- time.time()
 - String_Attributes
+- time.time()
 
 
-## time.time()
-runtime measure
-```python
-# 1) time.time()
-import time
-start_time = time.time()
-...
-print("This process takes %s seconds" %(time.time()-start_time))
 
-# 2) %timeit magic function
-import numpy as np
-
-a = np.random.randn(100,100)
-%timeit np.dot(a, a)
->> 35.6 µs ± 256 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
-```
-<br />
 
 ## Data_Load
 With Dask vs. Pandas chunksize option
@@ -38,12 +22,6 @@ data = dask.dataframe.read_csv("test_data.csv").compute()
 ```
 <br />
 
-random 
-```python
-import random
-random.randrange(1,10)
-```
-
 ## String_Attributes
 ```python
 .strip() # remove whitespace
@@ -53,5 +31,30 @@ random.randrange(1,10)
 #  splits the string into substrings if it finds instances of the separator
 a = "Hello, World!"
 a.split(",") # returns ['Hello', ' World!']
+```
+<br />
+
+## Random_Number
+```python
+import random
+random.randrange(1,10)
+```
+<br />
+
+## time.time()
+runtime measure
+```python
+# 1) time.time()
+import time
+start_time = time.time()
+...
+print("This process takes %s seconds" %(time.time()-start_time))
+
+# 2) %timeit magic function
+import numpy as np
+
+a = np.random.randn(100,100)
+%timeit np.dot(a, a)
+>> 35.6 µs ± 256 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ```
 <br />
