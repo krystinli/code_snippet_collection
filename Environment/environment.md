@@ -1,9 +1,6 @@
-### conda_env
+### Conda_Environment
 - [[conda-cheatsheet]](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
-- remove env: `conda env remove --name env_name` 
-- export env: `conda env export --no-builds | grep -v "prefix" > environment.yml`
 
-### Conda_Cheat_Sheet
 ```sh
 conda install --channel conda-forge boltons # Install a package (boltons) from a specific channel (conda-forge)
 conda remove --name bio-env toolz boltons # Remove one or more packages (toolz, boltons) from a specific environment (bio-env)
