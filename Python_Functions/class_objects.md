@@ -34,3 +34,47 @@ class Student(Person):
 p2 = Student("Mike", "Olsen")
 p2.greetings()
 ```
+
+### Super_Init
+It makes the child class inherit all the methods and properties from its parent:
+- By using the `super()` function, you do not have to use the name of the parent element.
+
+```python
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+
+p3 = Student("Mike", "Olsen")
+p3.greetings()
+
+
+# Add Properties
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+
+p4 = Student("Mike", "Olsen")
+p4.graduationyear
+
+# or
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+p5 = Student("Mike", "Olsen", 2020)
+p5.graduationyear
+
+# Add New Methods in Child Class:
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+p6 = Student("Mike", "Olsen", 2020)
+p6.welcome()
+```
