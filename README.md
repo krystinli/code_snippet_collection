@@ -4,7 +4,7 @@
 
 ### Progress_Tracker -> [:star:](https://github.com/krystinli/Inner_Space)
 - `NOV` :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle:  
-- `OCT` :green_circle: :green_circle: :green_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: 
+- `OCT` :green_circle: :green_circle: :green_circle: :large_blue_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: :white_circle: 
 
 ```
 git config --global user.email "krystinkrystin@hotmail.com"
