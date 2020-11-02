@@ -1,5 +1,12 @@
 # pandas
 
+### Jupyter_Notebooks
+```python
+# notebook viewing option
+pd.set_option('display.max_columns', 10)
+pd.set_option('display.max_rows', 10)
+```
+
 ### File_Transfer
 ```python
 # avoid saving or getting index_col
@@ -40,13 +47,6 @@ df.isnull().sum().sum() # count num of NaNs in the entire df
 
 # replace str None with NaN
 df.replace({None:np.nan}, inplace=True)
-```
-
-### Jupyter_Notebooks
-```python
-# notebook viewing option
-pd.set_option('display.max_columns', 10)
-pd.set_option('display.max_rows', 10)
 ```
 
 ### SQL
