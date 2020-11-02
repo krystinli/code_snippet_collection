@@ -23,3 +23,14 @@ p1.greetings()
 Inheritance is bascially a class of class, allowing us to define a class that inherits all the methods and properties from another class.
 - Parent class is the class being inherited from, also called base class.
 - Child class is the class that inherits from another class, also called derived class.
+- When you add the `__init__()` function, the child class no longer inherits the parent's `__init__()`, unless:
+
+```python
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+p2 = Student("Mike", "Olsen")
+p2.greetings()
+```
