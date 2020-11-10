@@ -4,6 +4,7 @@ Python is an object oriented programming language. Almost everything in Python i
 - An object is always an instance of a class. One class can have many instances.
 - Use the `__init__()` function to assign values to object properties. The __init__() function is called automatically every time the class is being used to create a new object.
 - The `self` parameter is a reference to the current instance of the class, used to access variables that belongs to the class; it has to be the first parameter of any function in the class.
+- When we call a method on an object, Python automatically fills in the first variable, which we call self by convention. This first variable is a reference to the object itself, hence it’s name. We can use this variable to reference other instance variables and functions of this object, like `self.firstname` and `self.greetings()`.
 
 ```python
 class Person:
@@ -21,7 +22,7 @@ p1.greetings()
 >>> "hello, ButterFly"
 ```
 
-## method
+## Method
 When a function is part of an object, ie. `greetings()`
 
 ## Inheritance
