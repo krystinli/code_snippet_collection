@@ -16,6 +16,7 @@ class Person:
     def greetings(self):
         print("hello, " + self.firstname + self.lastname)
 
+# constructs and initializes the object p1
 p1 = Person("Butter", "Fly", 2)
 p1.greetings()
 
@@ -26,13 +27,14 @@ p1.greetings()
 When a function is part of an object, ie. `greetings()`
 
 ## Inheritance
+DRY: Don’t Repeat Yourself.
+
 Inheritance is bascially a class of class, allowing us to define a class that inherits all the methods and properties from another class.
 - Parent class is the class being inherited from, also called base class.
 - Child class is the class that inherits from another class, also called derived class.
 - When you add the `__init__()` function, the child class no longer inherits the parent's `__init__()`, unless:
 
 ```python
-
 class Student(Person):
   def __init__(self, fname, lname):
     Person.__init__(self, fname, lname)
@@ -42,8 +44,9 @@ p2.greetings()
 ```
 
 ## Super_Init
-It makes the child class inherit all the methods and properties from its parent:
-- By using the `super()` function, you do not have to use the name of the parent element.
+When you override the constructor, the constructor from the parent class (from which we inherited) is not called at all. To make the child class inherit all the methods and properties from its parent:
+- You need the `super()` function, so you do not have to use the name of the parent element.
+- `super()` returns a reference to the parent class, so we can call the constructor of the parent class.
 
 ```python
 class Student(Person):
