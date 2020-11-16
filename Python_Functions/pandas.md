@@ -1,5 +1,14 @@
 # pandas
 
+### Basica
+```python
+# name first row as col names
+df.rename(columns=df.iloc[0])
+
+# select first 3 rows
+data[:2]
+```
+
 ### Jupyter_Notebooks
 ```python
 # notebook viewing option
