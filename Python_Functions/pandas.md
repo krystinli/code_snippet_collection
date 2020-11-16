@@ -7,6 +7,9 @@ df.rename(columns=df.iloc[0])
 
 # select first 3 rows
 data[:2]
+
+# remove header
+data = data.xs('Category: All categories', axis=1, drop_level=True)
 ```
 
 ### Jupyter_Notebooks
