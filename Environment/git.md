@@ -14,7 +14,8 @@ migrate to a new org
 ### Delete
 - delete remote branch: `git push origin --delete old_branch`
 - delete local branch: `git branch -D old_branch`
-- delete files: 
+- delete files locally: `rm filename` or `rm -r folder`
+- delete files on git: 
   - `git rm filename`
   - `git commit -m "remove file"`
 - revert after pushing: `git revert 85756v(commit#)`
