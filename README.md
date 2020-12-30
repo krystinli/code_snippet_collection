@@ -1,4 +1,5 @@
 ### To-Do
+- [ ] [[list comprehensions cheat sheet]]() 
 - [ ] [[complete pandas cheat sheet]]() 
 - [ ] [[basic matplotlib]]() project - create a plotting template. 
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
