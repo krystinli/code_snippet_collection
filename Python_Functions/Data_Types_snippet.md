@@ -1,5 +1,4 @@
 ## List Comprehensions
-
 ```py
 # updateing list
 lst.append(item) # item added to end of list
