@@ -1,4 +1,4 @@
-## List_Comprehensions
+## List Comprehensions
 
 ```py
 # updateing list
@@ -15,4 +15,19 @@ lst1.extend(lst2) # requires both lst already defined, extending an existing lis
 data_agg = []
 for chunk in lst_of_lst:
   data_agg.extend(chunk). # instead of data_agg = data_agg + chunk 
+
+# sorting 
+lst.sort() # sort a list in-place without creating a new obj 
+lst.sort(key=len) # sort by length of items in lst
+
+
+```
+
+### bisect
+The built-in bisect module implements binary search and insertion into a sorted list.
+```py
+import bisect
+
+bisect.bisect(lst, item) >>> location # find the location where an item should be inserted 
+bisect.insort(lst, item) >>> new lst # insert the item into lst to make a new lst (without checking if current lst is sorted)
 ```
