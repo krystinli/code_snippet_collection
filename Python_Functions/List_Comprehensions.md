@@ -25,6 +25,15 @@ sorted(lst) # return a new sorted lst from the old lst
 mapping = {}
 for i, value in enumerate(sequence):
   mapping[value] = i
+  
+# zipping - zip 2 sequences (lst, tups, etc) and create a list of tuples 
+zipped = zip(seq1, seq2)
+list(zipped) >>> list of tuples 
+
+for i, (a, b) in enumerate(zip(seq1, seq2)):
+  print("Index {0}: sync to values {1}, {2}".format(i, a, b))
+
+
 ```
 
 ### bisect
