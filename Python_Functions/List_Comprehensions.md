@@ -30,10 +30,16 @@ for i, value in enumerate(sequence):
 zipped = zip(seq1, seq2)
 list(zipped) >>> list of tuples 
 
+name_lst = [("vera", "wang"), ("celin", "dion")]
+first_name, last_name = zip(*name_lst) # unzip the sequence like converting a list of rows to cols
+>>> first_name = ("vera", "celin)
+
+# iterate over multiple sequences with enumerate and zip
 for i, (a, b) in enumerate(zip(seq1, seq2)):
   print("Index {0}: sync to values {1}, {2}".format(i, a, b))
 
-
+# reversed
+list(reverse(seq)) # reserve is a generator so it doesn't create the sequence until materialized (with list or for loop)
 ```
 
 ### bisect
