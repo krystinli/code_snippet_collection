@@ -19,8 +19,12 @@ for chunk in lst_of_lst:
 # sorting 
 lst.sort() # sort a list in-place without creating a new obj 
 lst.sort(key=len) # sort by length of items in lst
+sorted(lst) # return a new sorted lst from the old lst
 
-
+# enumerate - compute a dict mapping the values of a sequence to their locations in the sequence 
+mapping = {}
+for i, value in enumerate(sequence):
+  mapping[value] = i
 ```
 
 ### bisect
