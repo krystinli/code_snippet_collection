@@ -1,4 +1,8 @@
-## List Comprehensions
+## Dict
+```py
+```
+
+## List
 ```py
 # updateing list
 lst.append(item) # item added to end of list
