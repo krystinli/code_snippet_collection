@@ -1,3 +1,7 @@
+TOC
+- [Dict]()
+- [List]()
+
 ## Dict
 ```py
 # delete a key,value pair 
