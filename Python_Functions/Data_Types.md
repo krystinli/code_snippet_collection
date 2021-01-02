@@ -1,6 +1,6 @@
 TOC
-- [Dict]()
-- [List]()
+- [Dict](https://github.com/krystinli/code_snippet_collection/blob/master/Python_Functions/Data_Types.md#dict)
+- [List](https://github.com/krystinli/code_snippet_collection/blob/master/Python_Functions/Data_Types.md#list)
 
 ## Dict
 ```py
