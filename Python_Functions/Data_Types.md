@@ -1,5 +1,15 @@
 ## Dict
 ```py
+# delete a key,value pair 
+del dict[key]
+dict.pop(key) >>> return value of the key 
+
+# add/upsert new value
+dict[new_key] = new_value
+dict.update({old_key:new_value})
+
+list(dict.keys()) >>> return all keys in the dict 
+list(dict.values())
 ```
 
 ## List
