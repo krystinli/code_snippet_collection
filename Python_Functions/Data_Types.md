@@ -67,3 +67,23 @@ import bisect
 bisect.bisect(lst, item) >>> location # find the location where an item should be inserted 
 bisect.insort(lst, item) >>> new lst # insert the item into lst to make a new lst (without checking if current lst is sorted)
 ```
+
+### string
+Strings are arrays of bytes representing unicode characters. Python does not have a character data type, a single character is simply **a string with a length of 1**. str.() methods:
+```python
+# The `strip()` method removes any whitespace from the beginning or the end:
+print(a.strip()) # returns "Hello, World!"
+
+# The lower() method returns the string in lower case:
+print(a.lower()) 
+print(a.upper()) 
+
+# The replace() method replaces a string with another string:
+a = "Hello, World!"
+print(a.replace("H", "J"))
+
+# The split() method splits the string into substrings if it finds instances of the separator:
+print(a.split(",")) # returns ['Hello', ' World!']
+```
+
+
