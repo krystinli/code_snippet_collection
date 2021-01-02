@@ -43,6 +43,7 @@ for chunk in lst_of_lst:
 # sorting 
 lst.sort() # sort a list in-place without creating a new obj 
 lst.sort(key=len) # sort by length of items in lst
+lst.sort(reverse=True)
 sorted(lst) # return a new sorted lst from the old lst
 
 # enumerate - compute a dict mapping the values of a sequence to their locations in the sequence 
@@ -64,6 +65,10 @@ for i, (a, b) in enumerate(zip(seq1, seq2)):
 
 # reversed
 list(reverse(seq)) # reserve is a generator so it doesn't create the sequence until materialized (with list or for loop)
+
+# copy
+list_copy = lst.copy() 
+list_copy = lst[:] # or copy by slicing
 ```
 
 ### bisect
