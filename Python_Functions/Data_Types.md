@@ -69,18 +69,14 @@ bisect.insort(lst, item) >>> new lst # insert the item into lst to make a new ls
 ```
 
 ### string
-Strings are arrays of bytes representing unicode characters. Python does not have a character data type, a single character is simply **a string with a length of 1**. str.() methods:
+Strings are arrays of bytes representing unicode characters. Python does not have a character data type, a single character is simply **a string with a length of 1**. Some `str.()` methods:
 ```python
-# The `strip()` method removes any whitespace from the beginning or the end:
-print(a.strip()) # returns "Hello, World!"
+str.strip() # method removes any whitespace from the beginning or the end
+str.lower() # method returns the string in lower case
+str.upper()
 
-# The lower() method returns the string in lower case:
-print(a.lower()) 
-print(a.upper()) 
-
-# The replace() method replaces a string with another string:
 a = "Hello, World!"
-print(a.replace("H", "J"))
+a.replace("H", "J") # method replaces a string with another string
 
 # The split() method splits the string into substrings if it finds instances of the separator:
 print(a.split(",")) # returns ['Hello', ' World!']
