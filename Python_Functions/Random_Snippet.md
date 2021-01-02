@@ -1,13 +1,3 @@
-# TOC
-- Data_Load
-- String_Attributes
-- Random_Number
-- matplotlib
-- time.time()
-
-
-
-
 ## Data_Load
 With Dask vs. Pandas chunksize option
 ```python
