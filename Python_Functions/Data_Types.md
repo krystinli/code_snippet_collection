@@ -14,6 +14,13 @@ dict.update({old_key:new_value})
 
 list(dict.keys()) >>> return all keys in the dict 
 list(dict.values())
+
+# dict(zip(key_list, values_list)):
+col_name = ['name', 'age']
+name_list = ['Krystin', 5]
+
+dict_1 = dict(zip(col_name, name_list))
+
 ```
 
 ## List
@@ -79,7 +86,7 @@ a = "Hello, World!"
 a.replace("H", "J") # method replaces a string with another string
 
 # The split() method splits the string into substrings if it finds instances of the separator:
-print(a.split(",")) # returns ['Hello', ' World!']
+a.split(",") # returns ['Hello', ' World!']
 ```
 
 
