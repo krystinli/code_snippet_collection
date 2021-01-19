@@ -21,6 +21,15 @@ name_list = ['Krystin', 5]
 
 dict_1 = dict(zip(col_name, name_list))
 
+# creating dict from sequence
+mapping = {}
+for key,value in zip(key_list,value_list):
+  mapping[key]=value
+
+# dict is essentially a collection of 2-tuples (key-value pair)
+mapping = dict(zip(range(5), reversed(range(5)))) >>> {0:4, 1:3, 2:2, 3:1, 4:0}
+
+# default values
 ```
 
 ## List
