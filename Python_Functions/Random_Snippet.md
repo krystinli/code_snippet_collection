@@ -1,3 +1,12 @@
+## Jupyter_Functions
+functions specific for notebooks
+```python
+# notebook viewing option for pandas
+pd.set_option('display.max_columns', 999)
+pd.set_option('display.max_rows', 999)
+
+```
+
 ## Data_Load
 With Dask vs. Pandas chunksize option
 ```python
