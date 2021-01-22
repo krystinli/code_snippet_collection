@@ -1,6 +1,6 @@
 # pandas
 
-### Basica
+### Basic
 ```python
 # name first row as col names
 df.rename(columns=df.iloc[0])
@@ -10,13 +10,6 @@ data[:2]
 
 # remove header
 data = data.xs('Category: All categories', axis=1, drop_level=True)
-```
-
-### Jupyter_Notebooks
-```python
-# notebook viewing option
-pd.set_option('display.max_columns', 10)
-pd.set_option('display.max_rows', 10)
 ```
 
 ### File_Transfer
