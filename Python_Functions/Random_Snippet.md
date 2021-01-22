@@ -5,6 +5,27 @@ functions specific for notebooks
 pd.set_option('display.max_columns', 999)
 pd.set_option('display.max_rows', 999)
 
+# latex conversion or HTML
+%%latex
+Some important equations:$E = mc^2$
+$e^{i pi} = -1$
+
+%%HTML
+This is <em>really</em> neat!
+
+%load imports.py
+load another py file, a great way to store all the imports
+
+%run imports.py
+run a py file
+
+# plotting
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+# or
+%matplotlib notebook
 ```
 
 ## Data_Load
