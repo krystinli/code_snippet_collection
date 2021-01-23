@@ -30,16 +30,16 @@ for key,value in zip(key_list,value_list):
 mapping = dict(zip(range(5), reversed(range(5)))) >>> {0:4, 1:3, 2:2, 3:1, 4:0}
 
 # default values
-
 if key in some_dict:
   value = some_dict[key]
 else:
   value = default_value 
   
+# get attribute by default returns None if the key is invalid 
 # for this use case, you can do:
 value = some_dict.get(key, default_value)
-# get attribute by default returns None if the key is invalid 
 
+# default dict
 ```
 
 ## List
