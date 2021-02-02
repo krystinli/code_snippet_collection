@@ -24,6 +24,9 @@ col1    int8
 col2    int8
 dtype: object
 
+# Generally:
+new_df = pd.DataFrame(data, columns = ['col1','col2' ..])
+
 # Constructing DataFrame from numpy ndarray
 df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
                    columns=['a', 'b', 'c'])
@@ -107,8 +110,6 @@ pd.read_csv("folder/filename.csv", sep="|" , header=None, names= ["col1_nm","col
 
 ### Value_Setting
 ```python
-new_df = pd.DataFrame(data, columns = ['colname1','colname2','colname3'])
-
 # case
 df["col_name"] = df["col_name"].str.lower()
 df["col_name"] = df["col_name"].str.upper()
