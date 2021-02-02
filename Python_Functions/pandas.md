@@ -4,33 +4,29 @@
 
 ### pd.merge
 ```python
-# this is full outer join
+# Merge DataFrames df1 and df2 with specified left and right suffixes appended to any overlapping columns -> this is full outer join
 df1.merge(df2, left_on='lkey', right_on='rkey', suffixes=('_left', '_right')) 
 
->>> lkey  value_x rkey  value_y
-0  foo        1  foo        5
-1  foo        1  foo        8
-2  foo        5  foo        5
-3  foo        5  foo        8
-4  bar        2  bar        6
-5  baz        3  baz        7
+>>> lkey  value_left rkey  value_right
+0  foo           1  foo            5
+1  foo           1  foo            8
+2  foo           5  foo            5
+3  foo           5  foo            8
+4  bar           2  bar            6
+5  baz           3  baz            7
 
+# inner join and left join 
+df1.merge(df2, how='inner', on='a')
+df1.merge(df2, how='left', on='a') # or cross join 
 
+# join with different col_name
 new_df = pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
-new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') # join with different col_name
+new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') 
 
-new_df_append = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
-
-# union 
-union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
-union_df = pd.concat([df1, df2], ignore_index=True)
-
-# convert pd series into data frame
-new_df = some_col.to_frame()
-
-# creating a new df with a subset of columns
-df2 = df1[['col_1', 'col4', 'col5']]
+# this is joining on index 
+new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
 ```
+
 
 ### Basic
 ```python
@@ -42,6 +38,16 @@ data[:2]
 
 # remove header
 data = data.xs('Category: All categories', axis=1, drop_level=True)
+
+# union 
+union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
+union_df = pd.concat([df1, df2], ignore_index=True)
+
+# convert pd series into data frame
+new_df = some_col.to_frame()
+
+# creating a new df with a subset of columns
+df2 = df1[['col_1', 'col4', 'col5']]
 ```
 
 ### File_Transfer
