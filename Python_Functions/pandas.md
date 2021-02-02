@@ -31,7 +31,19 @@ df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
    a  b  c
 0  1  2  3
 1  4  5  6
-2  7  8  9              
+2  7  8  9
+
+# Prints a summary of columns count and its dtypes but not per column information:
+df.info(verbose=False)
+>>>
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 5 entries, 0 to 4
+Columns: 3 entries, int_col to float_col
+dtypes: float64(1), int64(1), object(1)
+memory usage: 248.0+ bytes
+
+# The memory_usage parameter allows deep introspection mode, specially useful for big DataFrames and fine-tune memory optimization:
+df.info(memory_usage='deep')
 ```
 
 ### pd.merge
