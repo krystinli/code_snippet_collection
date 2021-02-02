@@ -1,6 +1,7 @@
 # pandas
 - pd.DataFrame
 - pd.merge
+- memory
 
 ### pd.DataFrame
 ```py
@@ -74,6 +75,31 @@ new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1'
 new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
 ```
 
+### memory
+```py
+# The memory footprint of object dtype columns is ignored by default:
+>>> df.memory_usage()
+Index           128
+int64         40000
+float64       40000
+complex128    80000
+object        40000
+bool           5000
+dtype: int64
+
+>>> df.memory_usage(deep=True)
+Index            128
+int64          40000
+float64        40000
+complex128     80000
+object        180000
+bool            5000
+dtype: int64
+
+# Use a Categorical for efficient storage of an object-dtype column with many repeated values:
+>>> df['object'].astype('category').memory_usage(deep=True)
+5244
+```
 
 ### Basic
 ```python
