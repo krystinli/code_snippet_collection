@@ -1,4 +1,36 @@
 # pandas
+- pd.merge
+
+
+### pd.merge
+```python
+# this is full outer join
+df1.merge(df2, left_on='lkey', right_on='rkey', suffixes=('_left', '_right')) 
+
+>>> lkey  value_x rkey  value_y
+0  foo        1  foo        5
+1  foo        1  foo        8
+2  foo        5  foo        5
+3  foo        5  foo        8
+4  bar        2  bar        6
+5  baz        3  baz        7
+
+
+new_df = pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
+new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') # join with different col_name
+
+new_df_append = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
+
+# union 
+union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
+union_df = pd.concat([df1, df2], ignore_index=True)
+
+# convert pd series into data frame
+new_df = some_col.to_frame()
+
+# creating a new df with a subset of columns
+df2 = df1[['col_1', 'col4', 'col5']]
+```
 
 ### Basic
 ```python
@@ -78,20 +110,3 @@ df.groupby(['colname']).nunique() # group by + count distinct
 df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
 ```
 
-### Joining
-```python
-# left join
-new_df = pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
-new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') # join with different col_name
-new_df_append = pd.merge(df1, df2, right_index=True, left_index=True) # this is joining on index 
-
-# union 
-union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
-union_df = pd.concat([df1, df2], ignore_index=True)
-
-# convert pd series into data frame
-new_df = some_col.to_frame()
-
-# creating a new df with a subset of columns
-df2 = df1[['col_1', 'col4', 'col5']]
-```
