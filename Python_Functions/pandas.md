@@ -1,7 +1,73 @@
 # pandas
+- math_computation
+- SQL-Like_Attributes
 - memory
 - pd.merge
 - pd.DataFrame
+
+### math_computation
+```py
+df = pd.DataFrame([[4, 9]] * 3, columns=['A', 'B'])
+>>> df
+   A  B
+0  4  9
+1  4  9
+2  4  9
+
+# Apply a function along an axis of the DataFrame:
+df.apply(np.sqrt)
+
+>>> df.apply(np.sum, axis=0)
+A    12
+B    27
+
+>>> df.apply(np.sum, axis=1)
+0    13
+1    13
+2    13
+
+>>> df.apply(lambda x: [1, 2], axis=1)
+0    [1, 2]
+1    [1, 2]
+2    [1, 2]
+
+>>> df.apply(lambda x: pd.Series([1, 2], index=['foo', 'bar']), axis=1)
+   foo  bar
+0    1    2
+1    1    2
+2    1    2
+```
+
+### SQL-Like_Attributes
+```py
+# counting
+df.col.count() # select count(*)
+df.col.nunique() # select count(distinct col_nm)
+df.drop_duplicates() # drop dup rows
+
+# sorting
+df.sort_values(by=['some_col'], ascending=False, inplace=True) # order by desc
+df['rank'] = some_col.rank(ascending=False) # adding rank col to the df 
+df.sort_values('rank', ascending=True).head(10) # order by rank limit 10 
+
+# group by 
+df.groupby(['colname']).count()
+df.groupby(['colname']).nunique() # group by + count distinct 
+
+# new col 
+df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
+
+# where stmt 
+df[df['county'=='CA']] # select * from df where country = 'CA'
+df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from df where country = 'CA'
+
+pd.where(condition, value) # Where cond is True, keep the original value. Where False, replace with corresponding value from other.
+pd.mask(condition, value) # Where cond is False, keep the original value. Where True, replace with corresponding value from other. 
+
+# Query the columns of a DataFrame with a boolean expression:
+df[df.A > df.B] # is eqv to:
+df.query('A > B')
+```
 
 ### pd.merge
 ```python
@@ -52,6 +118,9 @@ dtype: int64
 # Use a Categorical for efficient storage of an object-dtype column with many repeated values:
 >>> df['object'].astype('category').memory_usage(deep=True)
 5244
+
+# Attempt to infer better dtypes for object columns:
+df.infer_objects().dtypes
 ```
 
 ### pd.DataFrame
@@ -161,29 +230,5 @@ df.isnull().sum().sum() # count num of NaNs in the entire df
 
 # replace str None with NaN
 df.replace({None:np.nan}, inplace=True)
-```
-
-### SQL
-```python
-# counting
-df.col_nm.count() # select count(*)
-df.col_nm.nunique() # select count(distinct col_nm)
-df.drop_duplicates() # drop dup rows
-
-# sorting
-df.sort_values(by=['some_col'], ascending=False, inplace=True) # order by desc
-df['rank'] = some_col.rank(ascending=False) # adding rank col to the df 
-df.sort_values('rank', ascending=True).head(10) # order by rank limit 10 
-
-# where stmt 
-df[df['county'=='CA']] # select * from df where country = 'CA'
-df[df['county'=='CA']].memberID.unique() # select count(distinct memberID) from df where country = 'CA'
-
-# group by 
-df.groupby(['colname']).count()
-df.groupby(['colname']).nunique() # group by + count distinct 
-
-# new col 
-df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
 ```
 
