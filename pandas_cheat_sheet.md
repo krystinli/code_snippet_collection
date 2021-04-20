@@ -6,9 +6,9 @@
 df1.merge(df2, left_on='lkey', right_on='rkey', suffixes=('_left', '_right')) 
 
 >>> lkey  column_left rkey  column_right
-0  foo          1    foo          5
-1  foo          1    foo          8
-2  foo          5    foo          5
+0   foo        1      foo          5
+1   foo        1      foo          8
+2   foo        5      foo          5
 
 
 # inner join and left join 
