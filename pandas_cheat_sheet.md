@@ -30,9 +30,15 @@ new_df = pd.merge(df1, df2, right_index=True, left_index=True)
 data.to_csv("path/filename.csv", index=False)
 pd.read_csv("path/filename.csv", index_col=0)
 
-
-
-# remove index
+# 2) remove index
 pd.read_csv("filename.csv", sep=",").drop(["unnamed 0"], axis=1) 
 pd.read_csv("folder/filename.csv", sep="|" , header=None, names= ["col1_nm","col2_nm",...]) # assign new col names 
+
+# 3) reading with chunksize option 
+df_chunk = pd.read_csv("test_data_75MB.csv", chunksize=100000) # 10% of total rows#
+chunk_list = []  
+
+for chunk in df_chunk:  
+    chunk_list.append(chunk)
+data = pd.concat(chunk_list)
 ```
