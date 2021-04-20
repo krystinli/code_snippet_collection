@@ -1,6 +1,8 @@
 # Pandas
+- pd.merge
+- read_csv
 
-## [pd.merge](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
+### [pd.merge](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
 ```python
 # 1) inner join and left join 
 df1.merge(df2, how='inner', on='a')
@@ -22,11 +24,13 @@ df3 = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key2')
 new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
 ```
 
-### File_Transfer
+### [pd.read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
 ```python
-# avoid saving or getting index_col
-data.to_csv("filename.csv", index=False)
-pd.read_csv("filename.csv", index_col=0)
+# 1) avoid saving or getting index_col
+data.to_csv("path/filename.csv", index=False)
+pd.read_csv("path/filename.csv", index_col=0)
+
+
 
 # remove index
 pd.read_csv("filename.csv", sep=",").drop(["unnamed 0"], axis=1) 
