@@ -69,30 +69,6 @@ df[df.A > df.B] # is eqv to:
 df.query('A > B')
 ```
 
-### pd.merge
-```python
-# Merge DataFrames df1 and df2 with specified left and right suffixes appended to any overlapping columns -> this is full outer join
-df1.merge(df2, left_on='lkey', right_on='rkey', suffixes=('_left', '_right')) 
-
->>> lkey  value_left rkey  value_right
-0  foo           1  foo            5
-1  foo           1  foo            8
-2  foo           5  foo            5
-3  foo           5  foo            8
-4  bar           2  bar            6
-5  baz           3  baz            7
-
-# inner join and left join 
-df1.merge(df2, how='inner', on='a')
-df1.merge(df2, how='left', on='a') # or cross join 
-
-# join with different col_name
-new_df = pd.merge(df_left, df_right, how='left', on=['key1','key2',...])
-new_df = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key1') 
-
-# this is joining on index 
-new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
-```
 
 ### memory
 ```py
@@ -190,17 +166,6 @@ new_df = some_col.to_frame()
 
 # creating a new df with a subset of columns
 df2 = df1[['col_1', 'col4', 'col5']]
-```
-
-### File_Transfer
-```python
-# avoid saving or getting index_col
-pd.read_csv("filename.csv", index_col=0)
-data.to_csv("filename.csv", index=False)
-
-# remove index
-pd.read_csv("filename.csv", sep=",").drop(["unnamed 0"], axis=1) 
-pd.read_csv("folder/filename.csv", sep="|" , header=None, names= ["col1_nm","col2_nm",...]) # assign new col names 
 ```
 
 ### Value_Setting
