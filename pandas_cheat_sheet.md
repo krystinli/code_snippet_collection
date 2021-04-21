@@ -18,6 +18,17 @@ df.dropna(subset=['name', 'toy'])
 # 5) Drop the rows where all elements are missing
 df.dropna(how='all')
 
+# 6) Show which entries in a DataFrame are NA.
+df.isna()
+
+# 7) replace str None with NaN
+df.replace({None:np.nan}, inplace=True)
+
+# 8) count num of NaNs in a columns
+df[col].isnull().sum() 
+
+# 9) count num of NaNs in the entire df
+df.isnull().sum().sum()
 ```
 
 ### [pd.merge](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
