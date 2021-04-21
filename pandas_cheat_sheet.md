@@ -1,5 +1,26 @@
 # Pandas
 
+```py
+# 1) counting
+df.col.count() # select count(*)
+df.col.nunique() # select count(distinct col_nm)
+df.drop_duplicates() # drop dup rows
+
+# 2) sorting
+df.sort_values(by=['some_col'], ascending=False, inplace=True) # order by desc
+df.sort_values('col', ascending=True).head(10) # order by rank limit 10 
+
+# 3) rename 
+df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
+
+# 4) condition on rows
+pd.where(condition, value) # Where cond is True, keep the original value. Where False, replace with corresponding value from other.
+pd.mask(condition, value) # Where cond is False, keep the original value. Where True, replace with corresponding value from other. 
+
+# 5) splitting the object, applying a function, and combining the results
+df.groupby(by=["b"], dropna=False).sum()
+```
+
 ### [pd.fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna)
 ```python
 # 1) Fill NA/NaN values using the specified method
@@ -84,4 +105,33 @@ chunk_list = []
 for chunk in df_chunk:  
     chunk_list.append(chunk)
 data = pd.concat(chunk_list)
+```
+
+### [pd.memory_usage](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.memory_usage.html)
+```py
+# The memory footprint of object dtype columns is ignored by default:
+>>> df.memory_usage()
+Index           128
+int64         40000
+float64       40000
+complex128    80000
+object        40000
+bool           5000
+dtype: int64
+
+>>> df.memory_usage(deep=True)
+Index            128
+int64          40000
+float64        40000
+complex128     80000
+object        180000
+bool            5000
+dtype: int64
+
+# Use a Categorical for efficient storage of an object-dtype column with many repeated values:
+>>> df['object'].astype('category').memory_usage(deep=True)
+5244
+
+# Attempt to infer better dtypes for object columns:
+df.infer_objects().dtypes
 ```
