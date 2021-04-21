@@ -1,6 +1,24 @@
 # Pandas
-- pd.merge
-- read_csv
+
+### [pd.fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna)
+```python
+# 1) Fill NA/NaN values using the specified method
+df.fillna(value=0, inplace=True)
+
+# 2) Replace all NaN elements in column ‘A’, ‘B’, ‘C’, and ‘D’, with 0, 1, 2, and 3 respectively.
+values = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+df.fillna(value=values)
+
+# 3) Drop the rows where at least one element is missing
+df.dropna(inplace=True)
+
+# 4) Define in which columns to look for missing values
+df.dropna(subset=['name', 'toy'])
+
+# 5) Drop the rows where all elements are missing
+df.dropna(how='all')
+
+```
 
 ### [pd.merge](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
 ```python
