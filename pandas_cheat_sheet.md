@@ -24,6 +24,20 @@ df3 = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key2')
 new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
 ```
 
+### [pd.apply](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html)
+```python
+# 1) apply sum as a reducing function on either axis
+df.apply(np.sum, axis=0)
+df.apply(np.sum, axis=1)
+
+# 2) apply to entire df
+df.apply(np.sqrt)
+
+# 3) lambda apply
+df.apply(lambda x: pd.Series([1, 2], index=['foo', 'bar']), axis=1)
+df.apply(lambda x: func(x['col1'], x['col2']), axis=1)
+```
+
 ### [pd.read_csv](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
 ```python
 # 1) avoid saving or getting index_col
