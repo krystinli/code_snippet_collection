@@ -1,42 +1,7 @@
 # pandas
-- math_computation
 - SQL-Like_Attributes
 - memory
-- pd.merge
 - pd.DataFrame
-
-### math_computation
-```py
-df = pd.DataFrame([[4, 9]] * 3, columns=['A', 'B'])
->>> df
-   A  B
-0  4  9
-1  4  9
-2  4  9
-
-# Apply a function along an axis of the DataFrame:
-df.apply(np.sqrt)
-
->>> df.apply(np.sum, axis=0)
-A    12
-B    27
-
->>> df.apply(np.sum, axis=1)
-0    13
-1    13
-2    13
-
->>> df.apply(lambda x: [1, 2], axis=1)
-0    [1, 2]
-1    [1, 2]
-2    [1, 2]
-
->>> df.apply(lambda x: pd.Series([1, 2], index=['foo', 'bar']), axis=1)
-   foo  bar
-0    1    2
-1    1    2
-2    1    2
-```
 
 ### SQL-Like_Attributes
 ```py
@@ -186,14 +151,3 @@ df.drop(["Column1"], axis=1)
 # reset_index
 df.reset_index(drop=True)
 ```
-
-### NaN/NULL
-```python
-# count NaN
-df[col].isnull().sum() # count num of NaNs in a columns
-df.isnull().sum().sum() # count num of NaNs in the entire df
-
-# replace str None with NaN
-df.replace({None:np.nan}, inplace=True)
-```
-
