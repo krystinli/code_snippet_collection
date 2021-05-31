@@ -1,8 +1,8 @@
-# Development
+## Development
 Take notes of different coding snippets and sort them here.
 ![img](https://www.educative.io/v2api/editorpage/4633464658722816/image/4844288916062208)
 
-## Categories
+### Categories
 Python
 - [x] pandas cheat sheet
 - [ ] [[matplotlib]]()
