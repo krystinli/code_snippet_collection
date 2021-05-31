@@ -4,4 +4,4 @@
 - [ ] [[basic matplotlib]]() project - create a plotting template. 
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
 - [ ] [[10-days-of-statistics]](https://www.hackerrank.com/domains/tutorials/10-days-of-statistics)
-- [ ] pandas cheat sheet
+- [x] pandas cheat sheet
