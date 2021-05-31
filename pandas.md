@@ -1,5 +1,12 @@
 # pd.snippet
 ```py
+# 0) types
+df.dtypes
+
+# Prints a summary of columns count and its dtypes but not per column information:
+df.info(verbose=False)
+df.describe
+
 # 1) counting
 df.col.count() # select count(*)
 df.col.nunique() # select count(distinct col_nm)
@@ -12,12 +19,40 @@ df.sort_values('col', ascending=True).head(10) # order by rank limit 10
 # 3) rename 
 df = df.rename(columns={'oldName1': 'newName1', 'oldName2': 'newName2'})
 
+# name first row as col names
+df.rename(columns=df.iloc[0])
+
 # 4) condition on rows
 pd.where(condition, value) # Where cond is True, keep the original value. Where False, replace with corresponding value from other.
 pd.mask(condition, value) # Where cond is False, keep the original value. Where True, replace with corresponding value from other. 
 
+# if condition
+df.loc[df["Column1"]=xxx, "Column2"] = "New value for Column2"
+
 # 5) splitting the object, applying a function, and combining the results
 df.groupby(by=["b"], dropna=False).sum()
+
+# reset_index
+df.reset_index(drop=True)
+
+# 6) constructing DataFrame from a dictionary
+>>> d = {'col1': [1, 2], 'col2': [3, 4]}
+>>> df = pd.DataFrame(data=d)
+
+# To enforce a single dtype and set col names
+>>> df = pd.DataFrame(data=d, dtype=np.int8, columns = ['col1','col2' ..])
+
+7) remove header
+data = data.xs('Category: All categories', axis=1, drop_level=True)
+
+# drop columns
+df.drop(["Column1"], axis=1)
+
+8) convert pd series into data frame
+new_df = some_col.to_frame()
+
+9) extract a single value from panda series row
+df[df[col]==A][col2].tolist()[0]
 ```
 
 ### [pd.fillna](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html#pandas.DataFrame.fillna)
@@ -49,9 +84,14 @@ df[col].isnull().sum()
 
 # 9) count num of NaNs in the entire df
 df.isnull().sum().sum()
+
+# 10) case
+df["col_name"] = df["col_name"].str.lower()
+df["col_name"] = df["col_name"].str.upper()
 ```
 
 ### [pd.merge](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
+horizontally combining the dfs
 ```python
 # 1) inner join and left join 
 df1.merge(df2, how='inner', on='a')
@@ -71,6 +111,13 @@ df3 = pd.merge(df_left, df_right, how='left', left_on='key1', right_on='key2')
 
 # 4) joining on index 
 new_df = pd.merge(df1, df2, right_index=True, left_index=True) 
+```
+
+### [pd.concat](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.concat.html)
+vertically combining the dfs
+```py
+union_df = pd.concat([df1, df2], ignore_index=True)
+union_df = df1.append(df2, ignore_index=True) # df cannot be empty [] to start with 
 ```
 
 ### [pd.apply](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html)
