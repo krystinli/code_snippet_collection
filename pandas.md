@@ -1,5 +1,4 @@
-# Pandas
-
+# pd.snippet
 ```py
 # 1) counting
 df.col.count() # select count(*)
