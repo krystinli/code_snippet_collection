@@ -5,7 +5,11 @@ Take notes of different coding snippets and sort them here.
 Python
 - [ ] [[matplotlib]]()
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
+- [ ] migrate from Python_Functions
 - [x] pandas cheat sheet
+
+Environment
+- [ ] git snippet
 
 Stats
 - [ ] [[10-days-of-statistics]](https://www.hackerrank.com/domains/tutorials/10-days-of-statistics)
