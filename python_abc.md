@@ -1,3 +1,29 @@
+### datetime
+Given a datetime instance, you can extract the eqv date and time objects.
+```py
+import datetime
+from datetime import datetime, date, time
+
+# year, month, date, hour, min, second
+dt = datetime(2020, 8, 5, 11, 11, 11)
+dt.month >>> 8
+```
+
+### strftime
+formats a datetime as a string
+```py
+dt.strftime('%y-%m-%d') >>> '20-08-05'
+
+dt = datetime(2020, 10, 25)
+dt.strftime("%B") >>> 'October'
+```
+
+### strptime
+str parsed into datetime objects
+```py
+datetime.strptime("202008", "%Y%m") >>> datetime.datetime(2020, 8, 1, 0, 0)
+```
+
 ### isinstance(target, type)->bool
 ```py
 a = 5
