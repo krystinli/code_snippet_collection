@@ -6,7 +6,8 @@
 - [ ] [[matplotlib]]()
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
 - [x] python concepts
-- [x] pandas cheat sheet
+- [x] pandas
+- [ ] numpy
 
 *Environment*
 - [ ] git snippet
