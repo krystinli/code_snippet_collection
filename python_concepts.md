@@ -1,3 +1,25 @@
+### duck_typing
+- we don't care about type of an object rather only whether it has certain methods or behaviour
+```py
+# verify if an obj is iterable by checking if it's implementable in iterator protocol:
+def isiterable(obj):
+    try:
+        iter(obj)
+        return True
+    except TypeError: 
+        return False
+
+isiterable('foo')  >>> True # a str is iterable
+isiterable(5) >>> False # an int is not iterable
+
+# this is useful to test input of a given function: (if it's not, convert it to be)
+x = (1,2,3)
+
+if not isinstance(x, list) and isiterable(x):
+    x = list(x)
+x >>> [1, 2, 3]
+```
+
 ### attributes_and_methods
 Objects in Python have 2 things:
 - attributes: other Python objects stored inside the class - obj of obj
@@ -30,7 +52,7 @@ a.append(4)
 a >>> [1, 2, 3, 4]
 b >>> [1, 2, 3, 4]
 
-To avoid creating reference instead of a true copy, use the .copy() method.
+# To avoid creating reference instead of a true copy, use the .copy() method.
 c = a.copy()
 a.append(5)
 
