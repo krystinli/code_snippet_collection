@@ -1,4 +1,4 @@
-**Take a sip of the morning coffee and starting my day with python ...** ☕
+**Take a sip of the morning coffee and starting my day ...** ☕
 ![img](https://www.educative.io/v2api/editorpage/4633464658722816/image/4844288916062208)
 
 ### Categories
