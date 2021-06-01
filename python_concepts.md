@@ -1,4 +1,4 @@
-### mutable_obj
+### mutable
 - mutable means the value can be modified; 
 - lists, dicts, numpy arrays, and most user-defined types are mutable;
 - Tuples, strings are immutable;
