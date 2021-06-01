@@ -1,4 +1,4 @@
-Take notes of different coding snippets and sort them here.
+**Take a sip of my morning coffee and always start my day with development ...** ☕
 ![img](https://www.educative.io/v2api/editorpage/4633464658722816/image/4844288916062208)
 
 ### Categories
