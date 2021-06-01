@@ -1,3 +1,11 @@
+### mutable_obj
+- mutable means the value can be modified; 
+- lists, dicts, numpy arrays, and most user-defined types are mutable;
+- Tuples, strings are immutable;
+```py
+
+```
+
 ### duck_typing
 - we don't care about type of an object rather only whether it has certain methods or behaviour
 ```py
