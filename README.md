@@ -5,7 +5,7 @@
 *Python*
 - [ ] [[matplotlib]]()
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
-- [ ] migrate from Python_Functions
+- [x] python concepts
 - [x] pandas cheat sheet
 
 *Environment*
