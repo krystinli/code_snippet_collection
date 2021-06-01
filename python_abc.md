@@ -1,4 +1,14 @@
-## Jupyter_Functions
+### isinstance(target, type)->bool
+```py
+a = 5
+isinstance(a, int) >>> True
+
+# isinstance can accept a tuple of types:
+a = 4.5; b = 5
+isinstance(a, (int, float)) >>> True
+```
+
+### notebook
 functions specific for notebooks
 ```python
 # notebook viewing option for pandas
@@ -28,7 +38,7 @@ import matplotlib.pyplot as plt
 %matplotlib notebook
 ```
 
-## Data_Load
+### data_load
 With Dask vs. Pandas chunksize option
 ```python
 # 1) data loading with pandas 
@@ -42,9 +52,8 @@ data = pd.concat(chunk_list)
 # 2) data loading with dask 
 data = dask.dataframe.read_csv("test_data.csv").compute()
 ```
-<br />
 
-## String_Attributes
+### string_attributes
 ```python
 .strip() # remove whitespace
 .lower()
@@ -54,25 +63,22 @@ data = dask.dataframe.read_csv("test_data.csv").compute()
 a = "Hello, World!"
 a.split(",") # returns ['Hello', ' World!']
 ```
-<br />
 
-## Random_Number
+### random_num
 ```python
 import random
 random.randrange(1,10)
 ```
-<br />
 
-## matplotlib
+### matplotlib
 ```python
 %matplotlib inline
 import matplotlib.pyplot as plt
 
 plt.plot(np.random.randn(50).cumsum())
 ```
-<br />
 
-## time.time()
+### time.time()
 runtime measure
 ```python
 # 1) time.time()
@@ -88,4 +94,3 @@ a = np.random.randn(100,100)
 %timeit np.dot(a, a)
 >> 35.6 µs ± 256 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 ```
-<br />
