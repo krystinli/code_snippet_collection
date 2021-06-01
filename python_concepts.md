@@ -1,3 +1,22 @@
+### attributes_and_methods
+Objects in Python have 2 things:
+- attributes: other Python objects stored inside the class - obj of obj
+- methods: functions associated with an object, that have access to the object's internal data
+```py
+class Person:
+    def __init__(self, firstname, lastname, age):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+   
+    def greetings(self):
+        print("hello, " + self.firstname + self.lastname + " :)")
+
+# initiate an instance of classs Person
+new_person = Person("Butter", "Fly", 2)
+new_person.greetings() >>> hello, ButterFly :)
+```
+
 ### variable_assignment
 - When assigning a variable in Python, you're creating a **reference to the object**.
 - Assignment is referred to as **binding**, as we are binding a name to an object.
