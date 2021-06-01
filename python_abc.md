@@ -1,3 +1,16 @@
+### lambda
+```py
+x = lambda a, b : a * b
+x(5, 6) >>> 30
+
+# nested function 
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mydoubler(11) >>> 22
+```
+
 ### datetime
 Given a datetime instance, you can extract the eqv date and time objects.
 ```py
