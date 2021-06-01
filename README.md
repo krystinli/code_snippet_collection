@@ -15,6 +15,7 @@
 - [ ] [[10-days-of-statistics]](https://www.hackerrank.com/domains/tutorials/10-days-of-statistics)
 
 *Random*
+- [ ] [krystinli/Learnings](https://github.com/krystinli/Learnings)
 - [ ] [A-gallery-of-interesting-Jupyter-Notebooks](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks)
 
 
