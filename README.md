@@ -7,7 +7,7 @@
 - [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
 - [x] python concepts
 - [x] pandas
-- [ ] numpy
+- [x] numpy
 
 *Environment*
 - [ ] git snippet
