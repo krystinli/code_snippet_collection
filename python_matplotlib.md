@@ -1,4 +1,7 @@
-## matplotlib_template
+## matplotlib
+- [[Tutorial]](https://matplotlib.org/stable/tutorials/index.html)
+- [[Gallery]](https://matplotlib.org/stable/gallery/index.html)
+
 ```py
 def plot_static(data, colname, color, target_low, target_high, img_name):
     """
