@@ -3,8 +3,7 @@
 
 ### Categories
 *Python*
-- [ ] [[matplotlib]]()
-- [ ] [[seaborn]](https://seaborn.pydata.org/tutorial.html)
+- [ ] matplotlib
 - [x] python concepts
 - [x] pandas
 - [x] numpy
