@@ -1,3 +1,9 @@
+### os
+```py
+cwd = os.getcwd()
+os.chdir("../newfolder")
+```
+
 ### lambda
 ```py
 x = lambda a, b : a * b
